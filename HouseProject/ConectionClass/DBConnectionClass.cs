@@ -8,65 +8,40 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace ConectionClass
-{  
+{
     public class DBConnectionClass
     {
-        #region Variables Globales
-       
-        public enum DBType
-        {
-            Access,
-            SQL_Server
-        }
-        private DBType _DBType;        
-        private string _ConnectionString;        
-        OleDbConnection _AccessConnexion;     
+        #region Variables Globales         
+        private string _ConnectionString;
         SqlConnection _SQLConnexion;
         #endregion
 
-        #region Properties
-        private string _pConnectionString;
-        /// <summary>
-        /// String que contiene el ConnectionString
-        /// </summary>
-        public string pConnectionString
-        {
-            get { return _pConnectionString; }
-            set { _pConnectionString = value; }
-        }
-
-        #endregion
-
-        #region Constructores
-        
-        public DBConnectionClass(DBType DBtype, string ConnectionString)
-        {
-            this._DBType = DBtype;
-            this._pConnectionString = ConnectionString;
-        }
-        #endregion
 
         #region Methods        
         public void GetConnexionString()
         {
-            _ConnectionString = ConfigurationManager.ConnectionStrings[pConnectionString].ConnectionString;
+            _ConnectionString = ConfigurationManager.ConnectionStrings["ConectionClass.Properties.Settings.MONEYBBDDConnectionString"].ConnectionString;
         }
-       
+
         public void Connect()
         {
             GetConnexionString();
-            if (_DBType == DBType.Access)
-            {
-                _AccessConnexion = new OleDbConnection(_ConnectionString);
-                _AccessConnexion.Open();
-            }
-            else if (_DBType == DBType.SQL_Server)
-            {
-                _SQLConnexion = new SqlConnection(_ConnectionString);
-                _SQLConnexion.Open();
-            }
-        }       
+            _SQLConnexion = new SqlConnection(_ConnectionString);
+            _SQLConnexion.Open();
+
+        }
+        public DataSet ComprobarUser(string serial_num, string passw)
+        {
+            Connect();
+            string query = "SELECT serial_num, password from users where serial_num='" + serial_num + "'AND password='" + passw + "'";
+            SqlDataAdapter adapter = new SqlDataAdapter(query, _ConnectionString);
+            DataSet dtsCli = new DataSet();
+            adapter.Fill(dtsCli);
+            _SQLConnexion.Close();
+            return dtsCli;
+        }
         #endregion
     }
 }

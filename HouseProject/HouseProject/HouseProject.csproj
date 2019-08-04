@@ -112,5 +112,11 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ConectionClass\ConectionClass.csproj">
+      <Project>{e78699cb-9606-45b9-8258-08afaeb0393f}</Project>
+      <Name>ConectionClass</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
