@@ -26,21 +26,26 @@ namespace HouseProject
         #endregion constructor
 
         #region Events
-        private void butLogin_Click(object sender, EventArgs e)
+        public void butLogin_Click(object sender, EventArgs e)
         {
             LoginAcces();
         }
         #endregion Events
 
         #region Methods
-        public void LoginAcces()
+        private void LoginAcces()
         {
             try
             {
+                labFail.Visible = false;
                 dts = connect.ComprobarUser(txtSerial.Text, txtPassw.Text);
                 if (dts.Tables[0].Rows.Count == 1)
                 {
                     MessageBox.Show("Welcome");
+                }
+                else
+                {
+                    labFail.Visible = true;                   
                 }
 
             }

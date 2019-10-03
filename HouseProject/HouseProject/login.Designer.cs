@@ -34,6 +34,7 @@
             this.labUser = new System.Windows.Forms.Label();
             this.labPassw = new System.Windows.Forms.Label();
             this.butLogin = new System.Windows.Forms.Button();
+            this.labFail = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtSerial
@@ -79,11 +80,23 @@
             this.butLogin.UseVisualStyleBackColor = true;
             this.butLogin.Click += new System.EventHandler(this.butLogin_Click);
             // 
+            // labFail
+            // 
+            this.labFail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labFail.Location = new System.Drawing.Point(357, 191);
+            this.labFail.Name = "labFail";
+            this.labFail.Size = new System.Drawing.Size(49, 20);
+            this.labFail.TabIndex = 5;
+            this.labFail.Text = "FAIL";
+            this.labFail.Visible = false;
+            // 
             // login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.labFail);
             this.Controls.Add(this.butLogin);
             this.Controls.Add(this.labPassw);
             this.Controls.Add(this.labUser);
@@ -104,6 +117,7 @@
         private System.Windows.Forms.Label labUser;
         private System.Windows.Forms.Label labPassw;
         private System.Windows.Forms.Button butLogin;
+        private System.Windows.Forms.Label labFail;
     }
 }
 
