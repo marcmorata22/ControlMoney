@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseProject", "HouseProjec
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConectionClass", "ConectionClass\ConectionClass.csproj", "{E78699CB-9606-45B9-8258-08AFAEB0393F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MainMenu", "MainMenu\MainMenu.csproj", "{6CD55B0B-6863-4E1B-8DE4-42E50B95A5D4}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{E78699CB-9606-45B9-8258-08AFAEB0393F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E78699CB-9606-45B9-8258-08AFAEB0393F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E78699CB-9606-45B9-8258-08AFAEB0393F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6CD55B0B-6863-4E1B-8DE4-42E50B95A5D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6CD55B0B-6863-4E1B-8DE4-42E50B95A5D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6CD55B0B-6863-4E1B-8DE4-42E50B95A5D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6CD55B0B-6863-4E1B-8DE4-42E50B95A5D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

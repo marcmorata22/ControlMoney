@@ -15,7 +15,8 @@ namespace HouseProject
     {
         #region Variables Globales 
         DataSet dts;
-        ConectionClass.DBConnectionClass connect = new ConectionClass.DBConnectionClass();       
+        ConectionClass.DBConnectionClass connect = new ConectionClass.DBConnectionClass();
+        Form menu = new MainMenu.Menu();
         #endregion Variables Globales 
 
         #region constructor
@@ -41,6 +42,7 @@ namespace HouseProject
                 dts = connect.ComprobarUser(txtSerial.Text, txtPassw.Text);
                 if (dts.Tables[0].Rows.Count == 1)
                 {
+                    menu.Show();
                     MessageBox.Show("Welcome");
                 }
                 else
