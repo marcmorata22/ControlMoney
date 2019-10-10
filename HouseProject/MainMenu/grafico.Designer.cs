@@ -32,7 +32,7 @@
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.grafMoney = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.lol = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.grafMoney)).BeginInit();
             this.SuspendLayout();
             // 
@@ -52,19 +52,19 @@
             this.grafMoney.TabIndex = 0;
             this.grafMoney.Text = "Gráfico";
             // 
-            // textBox1
+            // lol
             // 
-            this.textBox1.Location = new System.Drawing.Point(215, 34);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(355, 20);
-            this.textBox1.TabIndex = 1;
+            this.lol.Location = new System.Drawing.Point(405, 29);
+            this.lol.Name = "lol";
+            this.lol.Size = new System.Drawing.Size(100, 20);
+            this.lol.TabIndex = 1;
             // 
             // grafico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.lol);
             this.Controls.Add(this.grafMoney);
             this.Name = "grafico";
             this.Text = "Gráfico";
@@ -78,6 +78,6 @@
         #endregion
 
         private System.Windows.Forms.DataVisualization.Charting.Chart grafMoney;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox lol;
     }
 }

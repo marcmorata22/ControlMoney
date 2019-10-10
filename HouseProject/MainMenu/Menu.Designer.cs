@@ -40,6 +40,7 @@
             this.butgrafico.TabIndex = 0;
             this.butgrafico.Text = "Gráfico";
             this.butgrafico.UseVisualStyleBackColor = true;
+            this.butgrafico.Click += new System.EventHandler(this.butgrafico_Click);
             // 
             // butMant
             // 

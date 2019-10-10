@@ -42,7 +42,7 @@ namespace ConectionClass
             _SQLConnexion.Close();
             return dtsCli;
         }
-        public DataSet graphdata(string serial_num, string passw)
+        public DataSet graphdata()
         {
             Connect();
             string query = "Select * From graficoMoney";
