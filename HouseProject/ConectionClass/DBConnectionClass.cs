@@ -13,10 +13,10 @@ namespace ConectionClass
 {
     public class DBConnectionClass
     {
-        #region Variables Globales         
+        #region Global Vars    
         private string _ConnectionString;
         SqlConnection _SQLConnexion;
-        #endregion
+        #endregion Global Vars  
 
 
         #region Methods        
@@ -36,6 +36,16 @@ namespace ConectionClass
         {
             Connect();
             string query = "SELECT serial_num, password from users where serial_num='" + serial_num + "'AND password='" + passw + "'";
+            SqlDataAdapter adapter = new SqlDataAdapter(query, _ConnectionString);
+            DataSet dtsCli = new DataSet();
+            adapter.Fill(dtsCli);
+            _SQLConnexion.Close();
+            return dtsCli;
+        }
+        public DataSet graphdata(string serial_num, string passw)
+        {
+            Connect();
+            string query = "Select * From graficoMoney";
             SqlDataAdapter adapter = new SqlDataAdapter(query, _ConnectionString);
             DataSet dtsCli = new DataSet();
             adapter.Fill(dtsCli);

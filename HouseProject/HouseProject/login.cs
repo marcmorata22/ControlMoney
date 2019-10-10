@@ -13,11 +13,11 @@ namespace HouseProject
 {
     public partial class login : Form
     {
-        #region Variables Globales 
+        #region Global Vars 
         DataSet dts;
-        ConectionClass.DBConnectionClass connect = new ConectionClass.DBConnectionClass();
+        ConectionClass.DBConnectionClass connectBBDD = new ConectionClass.DBConnectionClass();
         Form menu = new MainMenu.Menu();
-        #endregion Variables Globales 
+        #endregion Global Vars
 
         #region constructor
         public login()
@@ -39,7 +39,7 @@ namespace HouseProject
             try
             {
                 labFail.Visible = false;
-                dts = connect.ComprobarUser(txtSerial.Text, txtPassw.Text);
+                dts = connectBBDD.ComprobarUser(txtSerial.Text, txtPassw.Text);
                 if (dts.Tables[0].Rows.Count == 1)
                 {
                     menu.Show();

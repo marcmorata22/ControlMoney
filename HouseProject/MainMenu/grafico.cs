@@ -13,7 +13,8 @@ namespace MainMenu
     public partial class grafico : Form
     {
         #region Variables globales
-        ConectionClass.DBConnectionClass connect = new ConectionClass.DBConnectionClass();
+        DataSet dts;
+        ConectionClass.DBConnectionClass connectBBDD = new ConectionClass.DBConnectionClass();
         #endregion Variables globales
         public grafico()
         {
