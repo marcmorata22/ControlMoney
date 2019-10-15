@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Forms;
 
 namespace ConectionClass
 {
@@ -17,7 +17,7 @@ namespace ConectionClass
         private string _ConnectionString;
         private string query;
         SqlConnection _SQLConnexion;
-        DataSet dtsCli = new DataSet();
+        DataSet dts = new DataSet();
         #endregion Global Vars  
 
 
@@ -39,18 +39,33 @@ namespace ConectionClass
             Connect();
             query = "Select serial_num, password from users where serial_num='" + serial_num + "'AND password='" + passw + "'";
             SqlDataAdapter adapter = new SqlDataAdapter(query, _ConnectionString);            
-            adapter.Fill(dtsCli);
+            adapter.Fill(dts);
             _SQLConnexion.Close();
-            return dtsCli;
+            return dts;
         }
         public DataSet graphdata()
         {
             Connect();
             query = "Select * From graficoMoney";
             SqlDataAdapter adapter = new SqlDataAdapter(query, _ConnectionString);           
-            adapter.Fill(dtsCli);
+            adapter.Fill(dts);
             _SQLConnexion.Close();
-            return dtsCli;
+            return dts;
+        }
+        public void update(DataSet dts, string query)
+        {
+            try
+            {
+                Connect();
+                SqlDataAdapter adapterDts = new SqlDataAdapter(query, _ConnectionString);
+                SqlCommandBuilder sqlCommand = new SqlCommandBuilder(adapterDts);
+
+                adapterDts.Update(dts);
+            }
+            catch (OleDbException ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
         #endregion
     }

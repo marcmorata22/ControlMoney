@@ -13,16 +13,18 @@ namespace MainMenu
 {
     public partial class grafico : Form
     {
-        #region Global Vars
+        #region Global Vars   
+        ConectionClass.DBConnectionClass connectBBDD = new ConectionClass.DBConnectionClass();
         DataSet dts;
         DataTable data;
-        ConectionClass.DBConnectionClass connectBBDD = new ConectionClass.DBConnectionClass();
         SqlCommand command = new SqlCommand();
-        double movement = 0;
-        double money = 0;
-        double total = 0;
-        int i;
         DateTime date;
+        public string query = "select * from graficoMoney";
+        string description;
+        double movement = 0;             
+        int i;
+        
+       
         #endregion Global Vars
 
         #region Builder
@@ -32,27 +34,46 @@ namespace MainMenu
         }
         #endregion Builder
 
+        #region Events
+        private void butUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion Events
+
         #region Methods
         public void grafico_Load(object sender, EventArgs e)
         {
-            calculgraph();
-        }
-        private double calculgraph()
-        {
-            double _calculgraph = 0;
             dts = connectBBDD.graphdata();
-            data = dts.Tables[0];            
+            data = dts.Tables[0];
+            insertData();
+        }
+
+        private void insertData()
+        {
+            DataRow rows = data.NewRow();
+            rows["total"] = calculGraph();
+            data.Rows.Add(rows);
+            connectBBDD.update(dts, query);
+        }       
+       
+        private double calculGraph()
+        {
+            double _calculGraph = 0;                        
             foreach (DataRow row in data.Rows)
-            {               
+            {         
                 movement = Convert.ToDouble(row["bankingmovement"]);
-                date = Convert.ToDateTime(row["date"]);
+                _calculGraph = Convert.ToDouble(row["total"]);
                 for (i = 0; i < 1; i++)
                 {
-                    money += movement;                    
+                    _calculGraph += movement;                   
                 }            
-            }
-            return _calculgraph;
+            }            
+            return _calculGraph;
         }
-        #endregion Methods
+        #endregion Methods        
     }
 }
+ //coger mes de la cadena fecha
+ //enum para los meses
+ //ir sumando según el mes
