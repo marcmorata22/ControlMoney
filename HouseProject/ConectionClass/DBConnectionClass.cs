@@ -15,7 +15,9 @@ namespace ConectionClass
     {
         #region Global Vars    
         private string _ConnectionString;
+        private string query;
         SqlConnection _SQLConnexion;
+        DataSet dtsCli = new DataSet();
         #endregion Global Vars  
 
 
@@ -35,9 +37,8 @@ namespace ConectionClass
         public DataSet ComprobarUser(string serial_num, string passw)
         {
             Connect();
-            string query = "SELECT serial_num, password from users where serial_num='" + serial_num + "'AND password='" + passw + "'";
-            SqlDataAdapter adapter = new SqlDataAdapter(query, _ConnectionString);
-            DataSet dtsCli = new DataSet();
+            query = "Select serial_num, password from users where serial_num='" + serial_num + "'AND password='" + passw + "'";
+            SqlDataAdapter adapter = new SqlDataAdapter(query, _ConnectionString);            
             adapter.Fill(dtsCli);
             _SQLConnexion.Close();
             return dtsCli;
@@ -45,9 +46,8 @@ namespace ConectionClass
         public DataSet graphdata()
         {
             Connect();
-            string query = "Select * From graficoMoney";
-            SqlDataAdapter adapter = new SqlDataAdapter(query, _ConnectionString);
-            DataSet dtsCli = new DataSet();
+            query = "Select * From graficoMoney";
+            SqlDataAdapter adapter = new SqlDataAdapter(query, _ConnectionString);           
             adapter.Fill(dtsCli);
             _SQLConnexion.Close();
             return dtsCli;

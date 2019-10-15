@@ -18,29 +18,41 @@ namespace MainMenu
         DataTable data;
         ConectionClass.DBConnectionClass connectBBDD = new ConectionClass.DBConnectionClass();
         SqlCommand command = new SqlCommand();
-        
-
+        double movement = 0;
+        double money = 0;
+        double total = 0;
+        int i;
+        DateTime date;
         #endregion Global Vars
+
+        #region Builder
         public grafico()
         {
             InitializeComponent();
         }
+        #endregion Builder
 
-        private void grafico_Load(object sender, EventArgs e)
-        {           
-            dts = connectBBDD.graphdata();
-            data = dts.Tables[0];
-            string valor1 = "";
-
-            foreach (DataRow row in data.Rows)
-            {
-
-                valor1 = Convert.ToString(row["ingresos"]);
-
-
-            }
-            lol.Text = valor1;
-
+        #region Methods
+        public void grafico_Load(object sender, EventArgs e)
+        {
+            calculgraph();
         }
+        private double calculgraph()
+        {
+            double _calculgraph = 0;
+            dts = connectBBDD.graphdata();
+            data = dts.Tables[0];            
+            foreach (DataRow row in data.Rows)
+            {               
+                movement = Convert.ToDouble(row["bankingmovement"]);
+                date = Convert.ToDateTime(row["date"]);
+                for (i = 0; i < 1; i++)
+                {
+                    money += movement;                    
+                }            
+            }
+            return _calculgraph;
+        }
+        #endregion Methods
     }
 }
