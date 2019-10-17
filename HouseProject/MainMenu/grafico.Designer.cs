@@ -41,6 +41,8 @@
             this.txtmovement = new System.Windows.Forms.TextBox();
             this.labmovement = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.txtmonth = new System.Windows.Forms.TextBox();
+            this.labmonth = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grafMoney)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGraph)).BeginInit();
             this.SuspendLayout();
@@ -132,12 +134,31 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
+            // txtmonth
+            // 
+            this.txtmonth.Location = new System.Drawing.Point(1310, 180);
+            this.txtmonth.Name = "txtmonth";
+            this.txtmonth.Size = new System.Drawing.Size(100, 20);
+            this.txtmonth.TabIndex = 8;
+            // 
+            // labmonth
+            // 
+            this.labmonth.AutoSize = true;
+            this.labmonth.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.labmonth.Location = new System.Drawing.Point(1247, 183);
+            this.labmonth.Name = "labmonth";
+            this.labmonth.Size = new System.Drawing.Size(37, 13);
+            this.labmonth.TabIndex = 9;
+            this.labmonth.Text = "Month";
+            // 
             // grafico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1422, 445);
+            this.Controls.Add(this.labmonth);
+            this.Controls.Add(this.txtmonth);
             this.Controls.Add(this.labmovement);
             this.Controls.Add(this.txtmovement);
             this.Controls.Add(this.dgvGraph);
@@ -169,5 +190,7 @@
         private System.Windows.Forms.TextBox txtmovement;
         private System.Windows.Forms.Label labmovement;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.TextBox txtmonth;
+        private System.Windows.Forms.Label labmonth;
     }
 }

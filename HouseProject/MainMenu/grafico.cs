@@ -75,7 +75,8 @@ namespace MainMenu
             DataRow rows = data.NewRow();                  
             rows["total"] = calculGraph(total,movement);
             rows["date"] = txtdate.Text;
-            rows["description"] = txtdescrip.Text;
+            rows["month"] = txtdescrip.Text;
+            rows["description"] = txtmonth.Text;
             rows["bankingmovement"] = txtmovement.Text;
             data.Rows.Add(rows);
             connectBBDD.update(dts, query);
