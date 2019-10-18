@@ -118,6 +118,7 @@
             this.txtmovement.Name = "txtmovement";
             this.txtmovement.Size = new System.Drawing.Size(100, 20);
             this.txtmovement.TabIndex = 0;
+            this.txtmovement.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtmovement_KeyPress);
             // 
             // labmovement
             // 

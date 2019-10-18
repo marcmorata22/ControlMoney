@@ -20,12 +20,12 @@ namespace MainMenu
         "septiembre","octubre","noviembre","diciembre"};        
         DataSet dts;
         DataTable data;
-        SqlCommand command = new SqlCommand();
         Series y = new Series();
         string query = "select * from graficoMoney";
         string month = "";
         double movement = 0;
-        double total = 0;        
+        double total = 0;   
+        bool regMonth;
         int i;
         #endregion Global Vars
 
@@ -42,7 +42,7 @@ namespace MainMenu
             try
             {
                 dts = connectBBDD.graphdata();
-                data = dts.Tables[0];
+                data = dts.Tables[0];                
                 fillChar();
             }
             catch(Exception Ge)
@@ -67,20 +67,44 @@ namespace MainMenu
         }        
         private void insertData()
         {
-            foreach (DataRow row in data.Rows)
-            {
-                movement = Convert.ToDouble(txtmovement.Text);
-                total = Convert.ToDouble(row["total"]);
+            try
+            {                
+                DataRow rows = data.NewRow();
+                foreach (DataRow row in data.Rows)
+                {
+                    movement = Convert.ToDouble(txtmovement.Text);
+                    total = Convert.ToDouble(row["total"]);
+                    month = Convert.ToString(row["month"]);
+                    regMonth = writeMonth(month);
+                    if (regMonth == true)
+                    {
+                        MessageBox.Show("Usted ha escrito una clave de mes repetida, si no es el último movimiento bancario del mes deje la casilla vacía.");
+                        txtmonth.Text = "";
+                        break;
+                    }
+                }                
+                rows["total"] = calculGraph(total, movement);
+                rows["date"] = txtdate.Text;               
+                rows["description"] = txtdescrip.Text;
+                rows["bankingmovement"] = txtmovement.Text;
+                rows["month"] = txtmonth.Text;                
+                data.Rows.Add(rows);
+                connectBBDD.update(dts, query);             
             }
-            DataRow rows = data.NewRow();                  
-            rows["total"] = calculGraph(total,movement);
-            rows["date"] = txtdate.Text;
-            rows["month"] = txtdescrip.Text;
-            rows["description"] = txtmonth.Text;
-            rows["bankingmovement"] = txtmovement.Text;
-            data.Rows.Add(rows);
-            connectBBDD.update(dts, query);
-        }     
+            catch(Exception Ge)
+            {
+                MessageBox.Show(Ge.Message + ", Porfavor inserte datos correctos");
+            }
+        }    
+        private bool writeMonth(string month)
+        {
+            bool _writeMonth = false;
+            if (txtmonth.Text.Equals(month))
+            {
+                _writeMonth = true;
+            }
+            return _writeMonth;
+        }
         private double calculGraph(double total, double movement)
         {
             double _calculGraph = total;
@@ -97,7 +121,18 @@ namespace MainMenu
         private void butUpdate_Click(object sender, EventArgs e)
         {
             insertData();
+            txtdate.Text = "";
+            txtdescrip.Text = "";
+            txtmonth.Text = "";
+            txtmovement.Text = "";
         }
+        private void txtmovement_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }        
         #endregion Events
     }
 }
