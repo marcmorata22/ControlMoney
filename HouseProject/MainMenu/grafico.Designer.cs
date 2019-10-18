@@ -31,6 +31,8 @@
             this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.grafMoney = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.txtdate = new System.Windows.Forms.TextBox();
             this.txtdescrip = new System.Windows.Forms.TextBox();
@@ -43,8 +45,10 @@
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.txtmonth = new System.Windows.Forms.TextBox();
             this.labmonth = new System.Windows.Forms.Label();
+            this.dailygraph = new System.Windows.Forms.DataVisualization.Charting.Chart();
             ((System.ComponentModel.ISupportInitialize)(this.grafMoney)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGraph)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dailygraph)).BeginInit();
             this.SuspendLayout();
             // 
             // grafMoney
@@ -57,7 +61,7 @@
             this.grafMoney.Name = "grafMoney";
             this.grafMoney.Size = new System.Drawing.Size(664, 354);
             this.grafMoney.TabIndex = 0;
-            this.grafMoney.Text = "Gráfico";
+            this.grafMoney.Text = "Mensual";
             // 
             // txtdate
             // 
@@ -75,7 +79,7 @@
             // 
             // butUpdate
             // 
-            this.butUpdate.Location = new System.Drawing.Point(1246, 369);
+            this.butUpdate.Location = new System.Drawing.Point(1246, 402);
             this.butUpdate.Name = "butUpdate";
             this.butUpdate.Size = new System.Drawing.Size(164, 23);
             this.butUpdate.TabIndex = 3;
@@ -109,7 +113,7 @@
             this.dgvGraph.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGraph.Location = new System.Drawing.Point(46, 71);
             this.dgvGraph.Name = "dgvGraph";
-            this.dgvGraph.Size = new System.Drawing.Size(513, 354);
+            this.dgvGraph.Size = new System.Drawing.Size(513, 726);
             this.dgvGraph.TabIndex = 6;
             // 
             // txtmovement
@@ -152,12 +156,25 @@
             this.labmonth.TabIndex = 9;
             this.labmonth.Text = "Month";
             // 
+            // dailygraph
+            // 
+            chartArea2.Name = "ChartArea1";
+            this.dailygraph.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.dailygraph.Legends.Add(legend2);
+            this.dailygraph.Location = new System.Drawing.Point(576, 443);
+            this.dailygraph.Name = "dailygraph";
+            this.dailygraph.Size = new System.Drawing.Size(664, 354);
+            this.dailygraph.TabIndex = 10;
+            this.dailygraph.Text = "Diario";
+            // 
             // grafico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1422, 445);
+            this.ClientSize = new System.Drawing.Size(1422, 832);
+            this.Controls.Add(this.dailygraph);
             this.Controls.Add(this.labmonth);
             this.Controls.Add(this.txtmonth);
             this.Controls.Add(this.labmovement);
@@ -174,6 +191,7 @@
             this.Load += new System.EventHandler(this.grafico_Load);
             ((System.ComponentModel.ISupportInitialize)(this.grafMoney)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGraph)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dailygraph)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -193,5 +211,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TextBox txtmonth;
         private System.Windows.Forms.Label labmonth;
+        private System.Windows.Forms.DataVisualization.Charting.Chart dailygraph;
     }
 }
