@@ -44,6 +44,7 @@ namespace MainMenu
                 dts = connectBBDD.graphdata();
                 data = dts.Tables[0];                
                 fillChar();
+                fillGrid(dts);
             }
             catch(Exception Ge)
             {
@@ -87,9 +88,12 @@ namespace MainMenu
                 rows["date"] = txtdate.Text;               
                 rows["description"] = txtdescrip.Text;
                 rows["bankingmovement"] = txtmovement.Text;
-                rows["month"] = txtmonth.Text;                
-                data.Rows.Add(rows);
-                connectBBDD.update(dts, query);             
+                rows["month"] = txtmonth.Text;
+                if (regMonth == false)
+                {
+                    data.Rows.Add(rows);
+                    connectBBDD.update(dts, query);
+                }
             }
             catch(Exception Ge)
             {
@@ -114,13 +118,19 @@ namespace MainMenu
                     _calculGraph += movement;                   
                 }                                    
             return _calculGraph;
-        }        
+        }
+        private void fillGrid(DataSet dts)
+        {
+            dgvGraph.DataSource = dts.Tables[0];
+            dgvGraph.Columns["id"].Visible = false;            
+        }
         #endregion Methods     
 
         #region Events
         private void butUpdate_Click(object sender, EventArgs e)
         {
             insertData();
+            fillGrid(dts);
             txtdate.Text = "";
             txtdescrip.Text = "";
             txtmonth.Text = "";
