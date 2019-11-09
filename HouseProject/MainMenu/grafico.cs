@@ -131,7 +131,6 @@ namespace MainMenu
         {
             insertData();
             fillGrid(dts);
-            fillChar();
             txtdate.Text = "";
             txtdescrip.Text = "";
             txtmonth.Text = "";
