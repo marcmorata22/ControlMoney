@@ -103,8 +103,8 @@ namespace MainMenu
         private bool writeMonth(string month)
         {
             bool _writeMonth = false;
-            if (txtmonth.Text.Equals(month))
-            {
+            if (txtmonth.Text.Equals(month) && txtmonth.Text != "")
+            {                
                 _writeMonth = true;
             }
             return _writeMonth;
@@ -131,6 +131,7 @@ namespace MainMenu
         {
             insertData();
             fillGrid(dts);
+            fillChar();
             txtdate.Text = "";
             txtdescrip.Text = "";
             txtmonth.Text = "";
