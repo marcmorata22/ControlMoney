@@ -39,70 +39,88 @@
             // 
             // txtSerial
             // 
-            this.txtSerial.Location = new System.Drawing.Point(361, 83);
+            this.txtSerial.Location = new System.Drawing.Point(445, 152);
+            this.txtSerial.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtSerial.Name = "txtSerial";
-            this.txtSerial.Size = new System.Drawing.Size(100, 20);
+            this.txtSerial.Size = new System.Drawing.Size(180, 29);
             this.txtSerial.TabIndex = 0;
             // 
             // txtPassw
             // 
-            this.txtPassw.Location = new System.Drawing.Point(361, 122);
+            this.txtPassw.Location = new System.Drawing.Point(445, 207);
+            this.txtPassw.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.txtPassw.Name = "txtPassw";
             this.txtPassw.PasswordChar = '*';
-            this.txtPassw.Size = new System.Drawing.Size(100, 20);
+            this.txtPassw.Size = new System.Drawing.Size(180, 29);
             this.txtPassw.TabIndex = 1;
             // 
             // labUser
             // 
             this.labUser.AutoSize = true;
-            this.labUser.Location = new System.Drawing.Point(282, 86);
+            this.labUser.BackColor = System.Drawing.Color.Transparent;
+            this.labUser.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.labUser.Location = new System.Drawing.Point(302, 157);
+            this.labUser.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labUser.Name = "labUser";
-            this.labUser.Size = new System.Drawing.Size(73, 13);
+            this.labUser.Size = new System.Drawing.Size(131, 24);
             this.labUser.TabIndex = 2;
             this.labUser.Text = "Serial Number";
             // 
             // labPassw
             // 
             this.labPassw.AutoSize = true;
-            this.labPassw.Location = new System.Drawing.Point(302, 125);
+            this.labPassw.BackColor = System.Drawing.Color.Transparent;
+            this.labPassw.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.labPassw.Location = new System.Drawing.Point(341, 210);
+            this.labPassw.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labPassw.Name = "labPassw";
-            this.labPassw.Size = new System.Drawing.Size(53, 13);
+            this.labPassw.Size = new System.Drawing.Size(92, 24);
             this.labPassw.TabIndex = 3;
             this.labPassw.Text = "Password";
             // 
             // butLogin
             // 
-            this.butLogin.Location = new System.Drawing.Point(386, 148);
+            this.butLogin.BackColor = System.Drawing.Color.Maroon;
+            this.butLogin.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.butLogin.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.butLogin.Location = new System.Drawing.Point(445, 272);
+            this.butLogin.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.butLogin.Name = "butLogin";
-            this.butLogin.Size = new System.Drawing.Size(75, 23);
+            this.butLogin.Size = new System.Drawing.Size(183, 74);
             this.butLogin.TabIndex = 4;
             this.butLogin.Text = "Login";
-            this.butLogin.UseVisualStyleBackColor = true;
+            this.butLogin.UseVisualStyleBackColor = false;
             this.butLogin.Click += new System.EventHandler(this.butLogin_Click);
             // 
             // labFail
             // 
+            this.labFail.BackColor = System.Drawing.Color.Transparent;
             this.labFail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labFail.Location = new System.Drawing.Point(357, 191);
+            this.labFail.ForeColor = System.Drawing.Color.Red;
+            this.labFail.Location = new System.Drawing.Point(662, 227);
+            this.labFail.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.labFail.Name = "labFail";
-            this.labFail.Size = new System.Drawing.Size(49, 20);
+            this.labFail.Size = new System.Drawing.Size(223, 24);
             this.labFail.TabIndex = 5;
-            this.labFail.Text = "FAIL";
+            this.labFail.Text = "Credenciales Incorrectas";
             this.labFail.Visible = false;
             // 
             // login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(932, 470);
             this.Controls.Add(this.labFail);
             this.Controls.Add(this.butLogin);
             this.Controls.Add(this.labPassw);
             this.Controls.Add(this.labUser);
             this.Controls.Add(this.txtPassw);
             this.Controls.Add(this.txtSerial);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             this.Name = "login";
             this.Text = "login";
             this.ResumeLayout(false);
