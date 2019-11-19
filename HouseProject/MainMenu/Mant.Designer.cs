@@ -36,11 +36,11 @@
             this.labTotal = new System.Windows.Forms.Label();
             this.laBankingmovement = new System.Windows.Forms.Label();
             this.labMonth = new System.Windows.Forms.Label();
-            this.sdstxtbox5 = new controlTxt.sdstxtbox();
-            this.sdstxtbox4 = new controlTxt.sdstxtbox();
-            this.sdstxtbox3 = new controlTxt.sdstxtbox();
-            this.sdstxtbox2 = new controlTxt.sdstxtbox();
-            this.sdstxtbox1 = new controlTxt.sdstxtbox();
+            this.sdstxtDate = new controlTxt.sdstxtbox();
+            this.sdstxTotal = new controlTxt.sdstxtbox();
+            this.sdstxtBanking = new controlTxt.sdstxtbox();
+            this.sdstxtMonth = new controlTxt.sdstxtbox();
+            this.sdstxtDescrip = new controlTxt.sdstxtbox();
             ((System.ComponentModel.ISupportInitialize)(this.GridMant)).BeginInit();
             this.SuspendLayout();
             // 
@@ -122,86 +122,91 @@
             this.labMonth.TabIndex = 12;
             this.labMonth.Text = "Month";
             // 
-            // sdstxtbox5
+            // sdstxtDate
             // 
-            this.sdstxtbox5.ColumnName = "date";
-            this.sdstxtbox5.Location = new System.Drawing.Point(864, 97);
-            this.sdstxtbox5.Name = "sdstxtbox5";
-            this.sdstxtbox5.Nom = null;
-            this.sdstxtbox5.NomTaula = "graficoMoney";
-            this.sdstxtbox5.Requerit = false;
-            this.sdstxtbox5.Size = new System.Drawing.Size(143, 20);
-            this.sdstxtbox5.TabIndex = 7;
-            this.sdstxtbox5.Text = "sdstxtbox";
+            this.sdstxtDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.sdstxtDate.ColumnName = "date";
+            this.sdstxtDate.Location = new System.Drawing.Point(864, 97);
+            this.sdstxtDate.Name = "sdstxtDate";
+            this.sdstxtDate.Nom = null;
+            this.sdstxtDate.NomTaula = "graficoMoney";
+            this.sdstxtDate.Requerit = false;
+            this.sdstxtDate.Size = new System.Drawing.Size(143, 20);
+            this.sdstxtDate.TabIndex = 7;
+            this.sdstxtDate.Text = "sdstxtbox";
             // 
-            // sdstxtbox4
+            // sdstxTotal
             // 
-            this.sdstxtbox4.ColumnName = "total";
-            this.sdstxtbox4.Location = new System.Drawing.Point(864, 123);
-            this.sdstxtbox4.Name = "sdstxtbox4";
-            this.sdstxtbox4.Nom = null;
-            this.sdstxtbox4.NomTaula = "graficoMoney";
-            this.sdstxtbox4.Requerit = false;
-            this.sdstxtbox4.Size = new System.Drawing.Size(143, 20);
-            this.sdstxtbox4.TabIndex = 6;
-            this.sdstxtbox4.Text = "sdstxtbox";
+            this.sdstxTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.sdstxTotal.ColumnName = "total";
+            this.sdstxTotal.Location = new System.Drawing.Point(864, 123);
+            this.sdstxTotal.Name = "sdstxTotal";
+            this.sdstxTotal.Nom = null;
+            this.sdstxTotal.NomTaula = "graficoMoney";
+            this.sdstxTotal.Requerit = false;
+            this.sdstxTotal.Size = new System.Drawing.Size(143, 20);
+            this.sdstxTotal.TabIndex = 6;
+            this.sdstxTotal.Text = "sdstxtbox";
             // 
-            // sdstxtbox3
+            // sdstxtBanking
             // 
-            this.sdstxtbox3.ColumnName = "bankingmovement";
-            this.sdstxtbox3.Location = new System.Drawing.Point(864, 149);
-            this.sdstxtbox3.Name = "sdstxtbox3";
-            this.sdstxtbox3.Nom = null;
-            this.sdstxtbox3.NomTaula = "graficoMoney";
-            this.sdstxtbox3.Requerit = false;
-            this.sdstxtbox3.Size = new System.Drawing.Size(143, 20);
-            this.sdstxtbox3.TabIndex = 5;
-            this.sdstxtbox3.Text = "sdstxtbox";
+            this.sdstxtBanking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.sdstxtBanking.ColumnName = "bankingmovement";
+            this.sdstxtBanking.Location = new System.Drawing.Point(864, 149);
+            this.sdstxtBanking.Name = "sdstxtBanking";
+            this.sdstxtBanking.Nom = null;
+            this.sdstxtBanking.NomTaula = "graficoMoney";
+            this.sdstxtBanking.Requerit = false;
+            this.sdstxtBanking.Size = new System.Drawing.Size(143, 20);
+            this.sdstxtBanking.TabIndex = 5;
+            this.sdstxtBanking.Text = "sdstxtbox";
             // 
-            // sdstxtbox2
+            // sdstxtMonth
             // 
-            this.sdstxtbox2.ColumnName = "month";
-            this.sdstxtbox2.Location = new System.Drawing.Point(864, 175);
-            this.sdstxtbox2.Name = "sdstxtbox2";
-            this.sdstxtbox2.Nom = null;
-            this.sdstxtbox2.NomTaula = "graficoMoney";
-            this.sdstxtbox2.Requerit = false;
-            this.sdstxtbox2.Size = new System.Drawing.Size(143, 20);
-            this.sdstxtbox2.TabIndex = 4;
-            this.sdstxtbox2.Text = "sdstxtbox";
+            this.sdstxtMonth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.sdstxtMonth.ColumnName = "month";
+            this.sdstxtMonth.Location = new System.Drawing.Point(864, 175);
+            this.sdstxtMonth.Name = "sdstxtMonth";
+            this.sdstxtMonth.Nom = null;
+            this.sdstxtMonth.NomTaula = "graficoMoney";
+            this.sdstxtMonth.Requerit = false;
+            this.sdstxtMonth.Size = new System.Drawing.Size(143, 20);
+            this.sdstxtMonth.TabIndex = 4;
+            this.sdstxtMonth.Text = "sdstxtbox";
             // 
-            // sdstxtbox1
+            // sdstxtDescrip
             // 
-            this.sdstxtbox1.ColumnName = "description";
-            this.sdstxtbox1.Location = new System.Drawing.Point(864, 71);
-            this.sdstxtbox1.Name = "sdstxtbox1";
-            this.sdstxtbox1.Nom = null;
-            this.sdstxtbox1.NomTaula = "graficoMoney";
-            this.sdstxtbox1.Requerit = false;
-            this.sdstxtbox1.Size = new System.Drawing.Size(143, 20);
-            this.sdstxtbox1.TabIndex = 3;
-            this.sdstxtbox1.Text = "sdstxtbox";
+            this.sdstxtDescrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.sdstxtDescrip.ColumnName = "description";
+            this.sdstxtDescrip.Location = new System.Drawing.Point(864, 71);
+            this.sdstxtDescrip.Name = "sdstxtDescrip";
+            this.sdstxtDescrip.Nom = null;
+            this.sdstxtDescrip.NomTaula = "graficoMoney";
+            this.sdstxtDescrip.Requerit = false;
+            this.sdstxtDescrip.Size = new System.Drawing.Size(143, 20);
+            this.sdstxtDescrip.TabIndex = 3;
+            this.sdstxtDescrip.Text = "sdstxtbox";
             // 
             // Mant
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1019, 637);
             this.Controls.Add(this.labMonth);
             this.Controls.Add(this.laBankingmovement);
             this.Controls.Add(this.labTotal);
             this.Controls.Add(this.labDate);
             this.Controls.Add(this.labDescrip);
-            this.Controls.Add(this.sdstxtbox5);
-            this.Controls.Add(this.sdstxtbox4);
-            this.Controls.Add(this.sdstxtbox3);
-            this.Controls.Add(this.sdstxtbox2);
-            this.Controls.Add(this.sdstxtbox1);
+            this.Controls.Add(this.sdstxtDate);
+            this.Controls.Add(this.sdstxTotal);
+            this.Controls.Add(this.sdstxtBanking);
+            this.Controls.Add(this.sdstxtMonth);
+            this.Controls.Add(this.sdstxtDescrip);
             this.Controls.Add(this.butInsert);
             this.Controls.Add(this.butUpdate);
             this.Controls.Add(this.GridMant);
-            this.ForeColor = System.Drawing.SystemColors.Control;
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.Name = "Mant";
             this.Text = "Mant";
             this.Load += new System.EventHandler(this.Mant_Load);
@@ -216,11 +221,11 @@
         private System.Windows.Forms.DataGridView GridMant;
         private System.Windows.Forms.Button butUpdate;
         private System.Windows.Forms.Button butInsert;
-        private controlTxt.sdstxtbox sdstxtbox1;
-        private controlTxt.sdstxtbox sdstxtbox2;
-        private controlTxt.sdstxtbox sdstxtbox3;
-        private controlTxt.sdstxtbox sdstxtbox4;
-        private controlTxt.sdstxtbox sdstxtbox5;
+        private controlTxt.sdstxtbox sdstxtDescrip;
+        private controlTxt.sdstxtbox sdstxtMonth;
+        private controlTxt.sdstxtbox sdstxtBanking;
+        private controlTxt.sdstxtbox sdstxTotal;
+        private controlTxt.sdstxtbox sdstxtDate;
         private System.Windows.Forms.Label labDescrip;
         private System.Windows.Forms.Label labDate;
         private System.Windows.Forms.Label labTotal;
