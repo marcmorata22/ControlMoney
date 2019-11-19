@@ -39,16 +39,20 @@
             // 
             // txtSerial
             // 
+            this.txtSerial.BackColor = System.Drawing.Color.Maroon;
+            this.txtSerial.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.txtSerial.Location = new System.Drawing.Point(445, 152);
-            this.txtSerial.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtSerial.Margin = new System.Windows.Forms.Padding(6);
             this.txtSerial.Name = "txtSerial";
             this.txtSerial.Size = new System.Drawing.Size(180, 29);
             this.txtSerial.TabIndex = 0;
             // 
             // txtPassw
             // 
+            this.txtPassw.BackColor = System.Drawing.Color.Maroon;
+            this.txtPassw.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.txtPassw.Location = new System.Drawing.Point(445, 207);
-            this.txtPassw.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtPassw.Margin = new System.Windows.Forms.Padding(6);
             this.txtPassw.Name = "txtPassw";
             this.txtPassw.PasswordChar = '*';
             this.txtPassw.Size = new System.Drawing.Size(180, 29);
@@ -84,7 +88,7 @@
             this.butLogin.Font = new System.Drawing.Font("Times New Roman", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.butLogin.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.butLogin.Location = new System.Drawing.Point(445, 272);
-            this.butLogin.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.butLogin.Margin = new System.Windows.Forms.Padding(6);
             this.butLogin.Name = "butLogin";
             this.butLogin.Size = new System.Drawing.Size(183, 74);
             this.butLogin.TabIndex = 4;
@@ -120,7 +124,7 @@
             this.Controls.Add(this.txtSerial);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "login";
             this.Text = "login";
             this.ResumeLayout(false);
