@@ -53,9 +53,10 @@ namespace MainMenu
         }
         private string fillChar()
         {
+            y = null;
             string _fillChar = "";           
             foreach (DataRow row in data.Rows)
-            {
+            {             
                 total = Convert.ToDouble(row["total"]);
                 month = Convert.ToString(row["month"]);                
                 if (listMonth.Contains(month))
