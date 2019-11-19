@@ -50,6 +50,7 @@
             this.butMant.TabIndex = 1;
             this.butMant.Text = "Mantenimiento";
             this.butMant.UseVisualStyleBackColor = true;
+            this.butMant.Click += new System.EventHandler(this.butMant_Click);
             // 
             // Menu
             // 

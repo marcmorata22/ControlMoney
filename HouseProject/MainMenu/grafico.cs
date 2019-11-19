@@ -35,22 +35,41 @@ namespace MainMenu
             InitializeComponent();
         }
         #endregion Builder
-        
-        #region Methods
+
+        #region Events
         public void grafico_Load(object sender, EventArgs e)
         {
             try
             {
                 dts = connectBBDD.graphdata();
-                data = dts.Tables[0];                
+                data = dts.Tables[0];
                 fillChar();
                 fillGrid(dts);
             }
-            catch(Exception Ge)
+            catch (Exception Ge)
             {
                 MessageBox.Show(Ge.Message);
             }
         }
+        private void butUpdate_Click(object sender, EventArgs e)
+        {
+            insertData();
+            fillGrid(dts);
+            txtdate.Text = "";
+            txtdescrip.Text = "";
+            txtmonth.Text = "";
+            txtmovement.Text = "";
+        }
+        private void txtmovement_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Char.IsLetter(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
+        #endregion Events
+
+        #region Methods        
         private string fillChar()
         {
             y = null;
@@ -127,23 +146,6 @@ namespace MainMenu
         }
         #endregion Methods     
 
-        #region Events
-        private void butUpdate_Click(object sender, EventArgs e)
-        {
-            insertData();
-            fillGrid(dts);
-            txtdate.Text = "";
-            txtdescrip.Text = "";
-            txtmonth.Text = "";
-            txtmovement.Text = "";
-        }
-        private void txtmovement_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (Char.IsLetter(e.KeyChar))
-            {
-                e.Handled = true;
-            }
-        }        
-        #endregion Events
+        
     }
 }

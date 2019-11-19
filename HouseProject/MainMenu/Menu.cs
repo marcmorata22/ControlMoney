@@ -13,6 +13,7 @@ namespace MainMenu
     public partial class Menu : Form
     {
         Form graph = new MainMenu.grafico();
+        Form Mant = new MainMenu.Mant();
         public Menu()
         {
             InitializeComponent();
@@ -21,6 +22,11 @@ namespace MainMenu
         private void butgrafico_Click(object sender, EventArgs e)
         {
             graph.Show();
+        }
+
+        private void butMant_Click(object sender, EventArgs e)
+        {
+            Mant.Show();
         }
     }
 }
