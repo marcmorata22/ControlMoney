@@ -185,7 +185,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1394, 844);
+            this.ClientSize = new System.Drawing.Size(1394, 804);
             this.Controls.Add(this.pictureBack);
             this.Controls.Add(this.dailygraph);
             this.Controls.Add(this.labmonth);
