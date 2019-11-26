@@ -28,13 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(login));
             this.txtSerial = new System.Windows.Forms.TextBox();
             this.txtPassw = new System.Windows.Forms.TextBox();
             this.labUser = new System.Windows.Forms.Label();
             this.labPassw = new System.Windows.Forms.Label();
             this.butLogin = new System.Windows.Forms.Button();
-            this.labFail = new System.Windows.Forms.Label();
+            this.errorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).BeginInit();
             this.SuspendLayout();
             // 
             // txtSerial
@@ -97,18 +99,9 @@
             this.butLogin.UseVisualStyleBackColor = false;
             this.butLogin.Click += new System.EventHandler(this.butLogin_Click);
             // 
-            // labFail
+            // errorProvider
             // 
-            this.labFail.BackColor = System.Drawing.Color.Transparent;
-            this.labFail.Font = new System.Drawing.Font("Times New Roman", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labFail.ForeColor = System.Drawing.Color.Red;
-            this.labFail.Location = new System.Drawing.Point(554, 283);
-            this.labFail.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            this.labFail.Name = "labFail";
-            this.labFail.Size = new System.Drawing.Size(248, 33);
-            this.labFail.TabIndex = 5;
-            this.labFail.Text = "Credentials Error";
-            this.labFail.Visible = false;
+            this.errorProvider.ContainerControl = this;
             // 
             // login
             // 
@@ -117,7 +110,6 @@
             this.AutoSize = true;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(908, 476);
-            this.Controls.Add(this.labFail);
             this.Controls.Add(this.butLogin);
             this.Controls.Add(this.labPassw);
             this.Controls.Add(this.labUser);
@@ -128,6 +120,7 @@
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "login";
             this.Text = "login";
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -140,7 +133,7 @@
         private System.Windows.Forms.Label labUser;
         private System.Windows.Forms.Label labPassw;
         private System.Windows.Forms.Button butLogin;
-        private System.Windows.Forms.Label labFail;
+        private System.Windows.Forms.ErrorProvider errorProvider;
     }
 }
 

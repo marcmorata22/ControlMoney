@@ -36,24 +36,28 @@
             // 
             // butgrafico
             // 
+            this.butgrafico.BackColor = System.Drawing.Color.Maroon;
+            this.butgrafico.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.butgrafico.Location = new System.Drawing.Point(113, 67);
-            this.butgrafico.Margin = new System.Windows.Forms.Padding(6);
+            this.butgrafico.Margin = new System.Windows.Forms.Padding(0);
             this.butgrafico.Name = "butgrafico";
-            this.butgrafico.Size = new System.Drawing.Size(200, 122);
+            this.butgrafico.Size = new System.Drawing.Size(190, 98);
             this.butgrafico.TabIndex = 0;
             this.butgrafico.Text = "Gráfico";
-            this.butgrafico.UseVisualStyleBackColor = true;
+            this.butgrafico.UseVisualStyleBackColor = false;
             this.butgrafico.Click += new System.EventHandler(this.butgrafico_Click);
             // 
             // butMant
             // 
-            this.butMant.Location = new System.Drawing.Point(113, 221);
+            this.butMant.BackColor = System.Drawing.Color.Maroon;
+            this.butMant.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.butMant.Location = new System.Drawing.Point(113, 182);
             this.butMant.Margin = new System.Windows.Forms.Padding(6);
             this.butMant.Name = "butMant";
-            this.butMant.Size = new System.Drawing.Size(200, 122);
+            this.butMant.Size = new System.Drawing.Size(190, 104);
             this.butMant.TabIndex = 1;
             this.butMant.Text = "Mantenimiento";
-            this.butMant.UseVisualStyleBackColor = true;
+            this.butMant.UseVisualStyleBackColor = false;
             this.butMant.Click += new System.EventHandler(this.butMant_Click);
             // 
             // label1
@@ -83,7 +87,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DodgerBlue;
+            this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(1075, 537);
             this.Controls.Add(this.labExit);
             this.Controls.Add(this.label1);

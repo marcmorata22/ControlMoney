@@ -175,7 +175,7 @@
             this.pictureBack.BackgroundImage = global::MainMenu.Properties.Resources.atras;
             this.pictureBack.Location = new System.Drawing.Point(10, 12);
             this.pictureBack.Name = "pictureBack";
-            this.pictureBack.Size = new System.Drawing.Size(133, 131);
+            this.pictureBack.Size = new System.Drawing.Size(129, 131);
             this.pictureBack.TabIndex = 11;
             this.pictureBack.TabStop = false;
             this.pictureBack.Click += new System.EventHandler(this.pictureBack_Click);

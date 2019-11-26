@@ -51,13 +51,12 @@ namespace HouseProject
                 dts = connectBBDD.ComprobarUser(txtSerial.Text, txtPassw.Text);
                 if (dts.Tables[0].Rows.Count == 1)
                 {
-                    labFail.Visible = false;
                     menu.Show();
                 }
                 else
                 {
-                    labFail.Visible = true;                    
-                    if(i >= 10)
+                    errorProvider.SetError(txtPassw, "Credentials Error");
+                    if (i >= 10)
                     {
                         System.Diagnostics.Process.Start("Reset.vbs");
                     }

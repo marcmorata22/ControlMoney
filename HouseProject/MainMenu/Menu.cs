@@ -21,7 +21,7 @@ namespace MainMenu
 
         #region Events
         private void butgrafico_Click(object sender, EventArgs e)
-        {
+        {            
             Form graph = new MainMenu.grafico();
             graph.Show();
         }
