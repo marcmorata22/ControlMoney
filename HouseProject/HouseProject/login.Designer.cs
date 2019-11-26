@@ -57,6 +57,7 @@
             this.txtPassw.PasswordChar = '*';
             this.txtPassw.Size = new System.Drawing.Size(180, 29);
             this.txtPassw.TabIndex = 1;
+            this.txtPassw.KeyUp += new System.Windows.Forms.KeyEventHandler(this.txtPassw_KeyUp);
             // 
             // labUser
             // 

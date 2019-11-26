@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.SqlClient;
+
+
 
 namespace HouseProject
 {
@@ -31,6 +32,13 @@ namespace HouseProject
         {
             LoginAcces();
         }
+        private void txtPassw_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                LoginAcces();
+            }
+        }
         #endregion Events
 
         #region Methods
@@ -43,19 +51,17 @@ namespace HouseProject
                 if (dts.Tables[0].Rows.Count == 1)
                 {
                     menu.Show();
-                    MessageBox.Show("Welcome");
                 }
                 else
                 {
-                    labFail.Visible = true;                   
+                    labFail.Visible = true;
                 }
-
             }
             catch (Exception Ge)
             {
                 MessageBox.Show(Ge.Message);
             }
         }
-        #endregion Methods
+        #endregion Methods        
     }
 }
