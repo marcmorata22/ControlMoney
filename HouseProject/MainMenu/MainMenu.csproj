@@ -91,6 +91,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="sdstxtbox.resx">
       <DependentUpon>sdstxtbox.cs</DependentUpon>
@@ -113,6 +114,10 @@
       <Project>{e78699cb-9606-45b9-8258-08afaeb0393f}</Project>
       <Name>ConectionClass</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="atras.png" />
+    <None Include="Resources\atras.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

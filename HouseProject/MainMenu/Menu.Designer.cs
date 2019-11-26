@@ -36,7 +36,7 @@
             // butgrafico
             // 
             this.butgrafico.Location = new System.Drawing.Point(108, 46);
-            this.butgrafico.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.butgrafico.Margin = new System.Windows.Forms.Padding(6);
             this.butgrafico.Name = "butgrafico";
             this.butgrafico.Size = new System.Drawing.Size(200, 133);
             this.butgrafico.TabIndex = 0;
@@ -47,7 +47,7 @@
             // butMant
             // 
             this.butMant.Location = new System.Drawing.Point(108, 219);
-            this.butMant.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.butMant.Margin = new System.Windows.Forms.Padding(6);
             this.butMant.Name = "butMant";
             this.butMant.Size = new System.Drawing.Size(200, 133);
             this.butMant.TabIndex = 1;
@@ -70,13 +70,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(1600, 865);
+            this.BackColor = System.Drawing.Color.DodgerBlue;
+            this.ClientSize = new System.Drawing.Size(1307, 584);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.butMant);
             this.Controls.Add(this.butgrafico);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Menu";
             this.Text = "Main Menu";
             this.ResumeLayout(false);

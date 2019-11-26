@@ -36,20 +36,22 @@
             this.labTotal = new System.Windows.Forms.Label();
             this.laBankingmovement = new System.Windows.Forms.Label();
             this.labMonth = new System.Windows.Forms.Label();
+            this.pictureBack = new System.Windows.Forms.PictureBox();
             this.sdstxtDate = new controlTxt.sdstxtbox();
             this.sdstxTotal = new controlTxt.sdstxtbox();
             this.sdstxtBanking = new controlTxt.sdstxtbox();
             this.sdstxtMonth = new controlTxt.sdstxtbox();
             this.sdstxtDescrip = new controlTxt.sdstxtbox();
             ((System.ComponentModel.ISupportInitialize)(this.GridMant)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBack)).BeginInit();
             this.SuspendLayout();
             // 
             // GridMant
             // 
             this.GridMant.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.GridMant.Location = new System.Drawing.Point(12, 12);
+            this.GridMant.Location = new System.Drawing.Point(12, 132);
             this.GridMant.Name = "GridMant";
-            this.GridMant.Size = new System.Drawing.Size(747, 613);
+            this.GridMant.Size = new System.Drawing.Size(737, 493);
             this.GridMant.TabIndex = 0;
             // 
             // butUpdate
@@ -76,7 +78,7 @@
             // 
             this.labDescrip.AutoSize = true;
             this.labDescrip.ForeColor = System.Drawing.SystemColors.Control;
-            this.labDescrip.Location = new System.Drawing.Point(798, 74);
+            this.labDescrip.Location = new System.Drawing.Point(787, 133);
             this.labDescrip.Name = "labDescrip";
             this.labDescrip.Size = new System.Drawing.Size(60, 13);
             this.labDescrip.TabIndex = 8;
@@ -86,7 +88,7 @@
             // 
             this.labDate.AutoSize = true;
             this.labDate.ForeColor = System.Drawing.SystemColors.Control;
-            this.labDate.Location = new System.Drawing.Point(806, 100);
+            this.labDate.Location = new System.Drawing.Point(795, 159);
             this.labDate.Name = "labDate";
             this.labDate.Size = new System.Drawing.Size(30, 13);
             this.labDate.TabIndex = 9;
@@ -96,7 +98,7 @@
             // 
             this.labTotal.AutoSize = true;
             this.labTotal.ForeColor = System.Drawing.SystemColors.Control;
-            this.labTotal.Location = new System.Drawing.Point(806, 126);
+            this.labTotal.Location = new System.Drawing.Point(795, 185);
             this.labTotal.Name = "labTotal";
             this.labTotal.Size = new System.Drawing.Size(31, 13);
             this.labTotal.TabIndex = 10;
@@ -106,7 +108,7 @@
             // 
             this.laBankingmovement.AutoSize = true;
             this.laBankingmovement.ForeColor = System.Drawing.SystemColors.Control;
-            this.laBankingmovement.Location = new System.Drawing.Point(763, 152);
+            this.laBankingmovement.Location = new System.Drawing.Point(752, 211);
             this.laBankingmovement.Name = "laBankingmovement";
             this.laBankingmovement.Size = new System.Drawing.Size(95, 13);
             this.laBankingmovement.TabIndex = 11;
@@ -116,17 +118,27 @@
             // 
             this.labMonth.AutoSize = true;
             this.labMonth.ForeColor = System.Drawing.SystemColors.Control;
-            this.labMonth.Location = new System.Drawing.Point(806, 178);
+            this.labMonth.Location = new System.Drawing.Point(795, 237);
             this.labMonth.Name = "labMonth";
             this.labMonth.Size = new System.Drawing.Size(37, 13);
             this.labMonth.TabIndex = 12;
             this.labMonth.Text = "Month";
             // 
+            // pictureBack
+            // 
+            this.pictureBack.BackgroundImage = global::MainMenu.Properties.Resources.atras;
+            this.pictureBack.Location = new System.Drawing.Point(12, 2);
+            this.pictureBack.Name = "pictureBack";
+            this.pictureBack.Size = new System.Drawing.Size(117, 124);
+            this.pictureBack.TabIndex = 13;
+            this.pictureBack.TabStop = false;
+            this.pictureBack.Click += new System.EventHandler(this.pictureBack_Click);
+            // 
             // sdstxtDate
             // 
             this.sdstxtDate.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.sdstxtDate.ColumnName = "date";
-            this.sdstxtDate.Location = new System.Drawing.Point(864, 97);
+            this.sdstxtDate.Location = new System.Drawing.Point(853, 156);
             this.sdstxtDate.Name = "sdstxtDate";
             this.sdstxtDate.Nom = null;
             this.sdstxtDate.NomTaula = "graficoMoney";
@@ -139,7 +151,7 @@
             // 
             this.sdstxTotal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.sdstxTotal.ColumnName = "total";
-            this.sdstxTotal.Location = new System.Drawing.Point(864, 123);
+            this.sdstxTotal.Location = new System.Drawing.Point(853, 182);
             this.sdstxTotal.Name = "sdstxTotal";
             this.sdstxTotal.Nom = null;
             this.sdstxTotal.NomTaula = "graficoMoney";
@@ -152,7 +164,7 @@
             // 
             this.sdstxtBanking.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.sdstxtBanking.ColumnName = "bankingmovement";
-            this.sdstxtBanking.Location = new System.Drawing.Point(864, 149);
+            this.sdstxtBanking.Location = new System.Drawing.Point(853, 208);
             this.sdstxtBanking.Name = "sdstxtBanking";
             this.sdstxtBanking.Nom = null;
             this.sdstxtBanking.NomTaula = "graficoMoney";
@@ -165,7 +177,7 @@
             // 
             this.sdstxtMonth.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.sdstxtMonth.ColumnName = "month";
-            this.sdstxtMonth.Location = new System.Drawing.Point(864, 175);
+            this.sdstxtMonth.Location = new System.Drawing.Point(853, 234);
             this.sdstxtMonth.Name = "sdstxtMonth";
             this.sdstxtMonth.Nom = null;
             this.sdstxtMonth.NomTaula = "graficoMoney";
@@ -178,7 +190,7 @@
             // 
             this.sdstxtDescrip.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.sdstxtDescrip.ColumnName = "description";
-            this.sdstxtDescrip.Location = new System.Drawing.Point(864, 71);
+            this.sdstxtDescrip.Location = new System.Drawing.Point(853, 130);
             this.sdstxtDescrip.Name = "sdstxtDescrip";
             this.sdstxtDescrip.Nom = null;
             this.sdstxtDescrip.NomTaula = "graficoMoney";
@@ -192,7 +204,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1019, 637);
+            this.ClientSize = new System.Drawing.Size(1036, 651);
+            this.Controls.Add(this.pictureBack);
             this.Controls.Add(this.labMonth);
             this.Controls.Add(this.laBankingmovement);
             this.Controls.Add(this.labTotal);
@@ -211,6 +224,7 @@
             this.Text = "Mant";
             this.Load += new System.EventHandler(this.Mant_Load);
             ((System.ComponentModel.ISupportInitialize)(this.GridMant)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBack)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -231,5 +245,6 @@
         private System.Windows.Forms.Label labTotal;
         private System.Windows.Forms.Label laBankingmovement;
         private System.Windows.Forms.Label labMonth;
+        private System.Windows.Forms.PictureBox pictureBack;
     }
 }

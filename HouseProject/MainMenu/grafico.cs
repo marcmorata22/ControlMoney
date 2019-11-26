@@ -51,6 +51,10 @@ namespace MainMenu
                 MessageBox.Show(Ge.Message);
             }
         }
+        private void pictureBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         private void butUpdate_Click(object sender, EventArgs e)
         {
             insertData();
@@ -144,8 +148,7 @@ namespace MainMenu
             dgvGraph.DataSource = dts.Tables[0];
             dgvGraph.Columns["id"].Visible = false;            
         }
-        #endregion Methods     
 
-        
+        #endregion Methods     
     }
 }

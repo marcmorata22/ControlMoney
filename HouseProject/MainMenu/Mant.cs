@@ -36,6 +36,10 @@ namespace MainMenu
             dts = connectBBDD.graphdata();
             RellenarGrid(dts);
         }
+        private void pictureBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
         private void butUpdate_Click(object sender, EventArgs e)
         {
             try
@@ -116,6 +120,5 @@ namespace MainMenu
             }
         }
         #endregion Methods
-        
     }
 }

@@ -46,9 +46,11 @@
             this.txtmonth = new System.Windows.Forms.TextBox();
             this.labmonth = new System.Windows.Forms.Label();
             this.dailygraph = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.pictureBack = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.grafMoney)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGraph)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailygraph)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBack)).BeginInit();
             this.SuspendLayout();
             // 
             // grafMoney
@@ -57,7 +59,7 @@
             this.grafMoney.ChartAreas.Add(chartArea1);
             legend1.Name = "Legend1";
             this.grafMoney.Legends.Add(legend1);
-            this.grafMoney.Location = new System.Drawing.Point(576, 71);
+            this.grafMoney.Location = new System.Drawing.Point(537, 149);
             this.grafMoney.Name = "grafMoney";
             this.grafMoney.Size = new System.Drawing.Size(664, 354);
             this.grafMoney.TabIndex = 0;
@@ -65,21 +67,21 @@
             // 
             // txtdate
             // 
-            this.txtdate.Location = new System.Drawing.Point(1310, 106);
+            this.txtdate.Location = new System.Drawing.Point(1274, 184);
             this.txtdate.Name = "txtdate";
             this.txtdate.Size = new System.Drawing.Size(100, 20);
             this.txtdate.TabIndex = 1;
             // 
             // txtdescrip
             // 
-            this.txtdescrip.Location = new System.Drawing.Point(1310, 71);
+            this.txtdescrip.Location = new System.Drawing.Point(1274, 149);
             this.txtdescrip.Name = "txtdescrip";
             this.txtdescrip.Size = new System.Drawing.Size(100, 20);
             this.txtdescrip.TabIndex = 2;
             // 
             // butUpdate
             // 
-            this.butUpdate.Location = new System.Drawing.Point(1246, 402);
+            this.butUpdate.Location = new System.Drawing.Point(1213, 480);
             this.butUpdate.Name = "butUpdate";
             this.butUpdate.Size = new System.Drawing.Size(164, 23);
             this.butUpdate.TabIndex = 3;
@@ -92,7 +94,7 @@
             this.labdescrip.AutoSize = true;
             this.labdescrip.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labdescrip.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labdescrip.Location = new System.Drawing.Point(1243, 74);
+            this.labdescrip.Location = new System.Drawing.Point(1207, 152);
             this.labdescrip.Name = "labdescrip";
             this.labdescrip.Size = new System.Drawing.Size(60, 13);
             this.labdescrip.TabIndex = 4;
@@ -102,7 +104,7 @@
             // 
             this.labdate.AutoSize = true;
             this.labdate.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labdate.Location = new System.Drawing.Point(1246, 109);
+            this.labdate.Location = new System.Drawing.Point(1210, 187);
             this.labdate.Name = "labdate";
             this.labdate.Size = new System.Drawing.Size(30, 13);
             this.labdate.TabIndex = 5;
@@ -111,14 +113,14 @@
             // dgvGraph
             // 
             this.dgvGraph.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvGraph.Location = new System.Drawing.Point(46, 71);
+            this.dgvGraph.Location = new System.Drawing.Point(10, 149);
             this.dgvGraph.Name = "dgvGraph";
-            this.dgvGraph.Size = new System.Drawing.Size(513, 726);
+            this.dgvGraph.Size = new System.Drawing.Size(521, 648);
             this.dgvGraph.TabIndex = 6;
             // 
             // txtmovement
             // 
-            this.txtmovement.Location = new System.Drawing.Point(1310, 143);
+            this.txtmovement.Location = new System.Drawing.Point(1274, 221);
             this.txtmovement.Name = "txtmovement";
             this.txtmovement.Size = new System.Drawing.Size(100, 20);
             this.txtmovement.TabIndex = 0;
@@ -128,7 +130,7 @@
             // 
             this.labmovement.AutoSize = true;
             this.labmovement.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labmovement.Location = new System.Drawing.Point(1246, 146);
+            this.labmovement.Location = new System.Drawing.Point(1210, 224);
             this.labmovement.Name = "labmovement";
             this.labmovement.Size = new System.Drawing.Size(57, 13);
             this.labmovement.TabIndex = 7;
@@ -141,7 +143,7 @@
             // 
             // txtmonth
             // 
-            this.txtmonth.Location = new System.Drawing.Point(1310, 180);
+            this.txtmonth.Location = new System.Drawing.Point(1274, 258);
             this.txtmonth.Name = "txtmonth";
             this.txtmonth.Size = new System.Drawing.Size(100, 20);
             this.txtmonth.TabIndex = 8;
@@ -150,7 +152,7 @@
             // 
             this.labmonth.AutoSize = true;
             this.labmonth.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labmonth.Location = new System.Drawing.Point(1247, 183);
+            this.labmonth.Location = new System.Drawing.Point(1211, 261);
             this.labmonth.Name = "labmonth";
             this.labmonth.Size = new System.Drawing.Size(37, 13);
             this.labmonth.TabIndex = 9;
@@ -162,18 +164,29 @@
             this.dailygraph.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.dailygraph.Legends.Add(legend2);
-            this.dailygraph.Location = new System.Drawing.Point(576, 443);
+            this.dailygraph.Location = new System.Drawing.Point(537, 509);
             this.dailygraph.Name = "dailygraph";
-            this.dailygraph.Size = new System.Drawing.Size(664, 354);
+            this.dailygraph.Size = new System.Drawing.Size(664, 288);
             this.dailygraph.TabIndex = 10;
             this.dailygraph.Text = "Diario";
+            // 
+            // pictureBack
+            // 
+            this.pictureBack.BackgroundImage = global::MainMenu.Properties.Resources.atras;
+            this.pictureBack.Location = new System.Drawing.Point(10, 12);
+            this.pictureBack.Name = "pictureBack";
+            this.pictureBack.Size = new System.Drawing.Size(133, 131);
+            this.pictureBack.TabIndex = 11;
+            this.pictureBack.TabStop = false;
+            this.pictureBack.Click += new System.EventHandler(this.pictureBack_Click);
             // 
             // grafico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.ClientSize = new System.Drawing.Size(1422, 832);
+            this.ClientSize = new System.Drawing.Size(1394, 844);
+            this.Controls.Add(this.pictureBack);
             this.Controls.Add(this.dailygraph);
             this.Controls.Add(this.labmonth);
             this.Controls.Add(this.txtmonth);
@@ -192,6 +205,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.grafMoney)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGraph)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailygraph)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBack)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -212,5 +226,6 @@
         private System.Windows.Forms.TextBox txtmonth;
         private System.Windows.Forms.Label labmonth;
         private System.Windows.Forms.DataVisualization.Charting.Chart dailygraph;
+        private System.Windows.Forms.PictureBox pictureBack;
     }
 }
