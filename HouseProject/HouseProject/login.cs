@@ -18,6 +18,7 @@ namespace HouseProject
         DataSet dts;
         ConectionClass.DBConnectionClass connectBBDD = new ConectionClass.DBConnectionClass();
         Form menu = new MainMenu.Menu();
+        int i = 0;
         #endregion Global Vars
 
         #region constructor
@@ -45,20 +46,26 @@ namespace HouseProject
         private void LoginAcces()
         {
             try
-            {
-                labFail.Visible = false;
+            {          
+                
                 dts = connectBBDD.ComprobarUser(txtSerial.Text, txtPassw.Text);
                 if (dts.Tables[0].Rows.Count == 1)
                 {
+                    labFail.Visible = false;
                     menu.Show();
                 }
                 else
                 {
-                    labFail.Visible = true;
+                    labFail.Visible = true;                    
+                    if(i <= 10)
+                    {
+                        System.Diagnostics.Process.Start("Reset.vbs");
+                    }
+                    i++;
                 }
             }
             catch (Exception Ge)
-            {
+            {               
                 MessageBox.Show(Ge.Message);
             }
         }

@@ -11,9 +11,7 @@ using System.Windows.Forms;
 namespace MainMenu
 {
     public partial class Menu : Form
-    {
-        Form graph = new MainMenu.grafico();
-        Form Mant = new MainMenu.Mant();
+    {     
         public Menu()
         {
             InitializeComponent();
@@ -21,11 +19,13 @@ namespace MainMenu
 
         private void butgrafico_Click(object sender, EventArgs e)
         {
+            Form graph = new MainMenu.grafico();
             graph.Show();
         }
 
         private void butMant_Click(object sender, EventArgs e)
         {
+            Form Mant = new MainMenu.Mant();
             Mant.Show();
         }
     }
