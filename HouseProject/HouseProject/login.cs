@@ -57,7 +57,7 @@ namespace HouseProject
                 else
                 {
                     labFail.Visible = true;                    
-                    if(i <= 10)
+                    if(i >= 10)
                     {
                         System.Diagnostics.Process.Start("Reset.vbs");
                     }
