@@ -11,11 +11,15 @@ using System.Windows.Forms;
 namespace MainMenu
 {
     public partial class Menu : Form
-    {     
+    {
+        #region Builder
         public Menu()
         {
             InitializeComponent();
         }
+        #endregion Builder
+
+        #region Events
         private void butgrafico_Click(object sender, EventArgs e)
         {
             Form graph = new MainMenu.grafico();
@@ -26,5 +30,10 @@ namespace MainMenu
             Form Mant = new MainMenu.Mant();
             Mant.Show();
         }
+        private void labExit_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+        #endregion Events
     }
 }
