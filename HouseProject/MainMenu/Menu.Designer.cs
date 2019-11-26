@@ -60,7 +60,7 @@
             // 
             this.label1.Font = new System.Drawing.Font("Times New Roman", 26.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(1004, 26);
+            this.label1.Location = new System.Drawing.Point(850, 20);
             this.label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(231, 85);
@@ -84,7 +84,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DodgerBlue;
-            this.ClientSize = new System.Drawing.Size(1307, 537);
+            this.ClientSize = new System.Drawing.Size(1075, 537);
             this.Controls.Add(this.labExit);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.butMant);
