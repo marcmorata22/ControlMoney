@@ -20,13 +20,15 @@ namespace MainMenu
         "septiembre","octubre","noviembre","diciembre"};        
         DataSet dts;
         DataTable data;
+        DateTime date;
         Series y = new Series();
+        Series x = new Series();
         string query = "select * from graficoMoney";
         string month = "";
         double movement = 0;
         double total = 0;   
         bool regMonth;
-        int i;
+        int i = 0;
         #endregion Global Vars
 
         #region Builder
@@ -76,18 +78,25 @@ namespace MainMenu
         #region Methods        
         private void fillTools()
         {
-            y = null;               
+            y = null;
+            x = null;
             foreach (DataRow row in data.Rows)
             {             
                 total = Convert.ToDouble(row["total"]);
                 month = Convert.ToString(row["month"]);
+                date = Convert.ToDateTime(row["date"]);
                 labLast.Text = row["total"].ToString();
-                labLast.Text += "€"; 
+                labLast.Text += "€";
+
+               x = dailygraph.Series.Add(i.ToString());
+               x.Points.AddXY(date,total);
+                
                 if (listMonth.Contains(month))
                 {
                     y = grafMoney.Series.Add(month.ToString());
                     y.Points.Add(total);
-                }               
+                }
+                i++;
             }            
         }        
         private void insertData()

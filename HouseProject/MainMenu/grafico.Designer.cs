@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea4 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend4 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.grafMoney = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.txtdate = new System.Windows.Forms.TextBox();
             this.txtdescrip = new System.Windows.Forms.TextBox();
@@ -56,33 +56,33 @@
             // 
             // grafMoney
             // 
-            chartArea5.Name = "ChartArea1";
-            this.grafMoney.ChartAreas.Add(chartArea5);
-            legend5.Name = "Legend1";
-            this.grafMoney.Legends.Add(legend5);
-            this.grafMoney.Location = new System.Drawing.Point(537, 149);
+            chartArea3.Name = "ChartArea1";
+            this.grafMoney.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.grafMoney.Legends.Add(legend3);
+            this.grafMoney.Location = new System.Drawing.Point(567, 149);
             this.grafMoney.Name = "grafMoney";
-            this.grafMoney.Size = new System.Drawing.Size(664, 354);
+            this.grafMoney.Size = new System.Drawing.Size(634, 279);
             this.grafMoney.TabIndex = 0;
             this.grafMoney.Text = "Mensual";
             // 
             // txtdate
             // 
-            this.txtdate.Location = new System.Drawing.Point(1274, 184);
+            this.txtdate.Location = new System.Drawing.Point(1282, 253);
             this.txtdate.Name = "txtdate";
             this.txtdate.Size = new System.Drawing.Size(100, 20);
             this.txtdate.TabIndex = 1;
             // 
             // txtdescrip
             // 
-            this.txtdescrip.Location = new System.Drawing.Point(1274, 149);
+            this.txtdescrip.Location = new System.Drawing.Point(1282, 218);
             this.txtdescrip.Name = "txtdescrip";
             this.txtdescrip.Size = new System.Drawing.Size(100, 20);
             this.txtdescrip.TabIndex = 2;
             // 
             // butUpdate
             // 
-            this.butUpdate.Location = new System.Drawing.Point(1213, 480);
+            this.butUpdate.Location = new System.Drawing.Point(1218, 405);
             this.butUpdate.Name = "butUpdate";
             this.butUpdate.Size = new System.Drawing.Size(164, 23);
             this.butUpdate.TabIndex = 3;
@@ -95,7 +95,7 @@
             this.labdescrip.AutoSize = true;
             this.labdescrip.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.labdescrip.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labdescrip.Location = new System.Drawing.Point(1207, 152);
+            this.labdescrip.Location = new System.Drawing.Point(1215, 221);
             this.labdescrip.Name = "labdescrip";
             this.labdescrip.Size = new System.Drawing.Size(60, 13);
             this.labdescrip.TabIndex = 4;
@@ -105,7 +105,7 @@
             // 
             this.labdate.AutoSize = true;
             this.labdate.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labdate.Location = new System.Drawing.Point(1210, 187);
+            this.labdate.Location = new System.Drawing.Point(1218, 256);
             this.labdate.Name = "labdate";
             this.labdate.Size = new System.Drawing.Size(30, 13);
             this.labdate.TabIndex = 5;
@@ -116,12 +116,12 @@
             this.dgvGraph.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvGraph.Location = new System.Drawing.Point(10, 149);
             this.dgvGraph.Name = "dgvGraph";
-            this.dgvGraph.Size = new System.Drawing.Size(521, 648);
+            this.dgvGraph.Size = new System.Drawing.Size(551, 279);
             this.dgvGraph.TabIndex = 6;
             // 
             // txtmovement
             // 
-            this.txtmovement.Location = new System.Drawing.Point(1274, 221);
+            this.txtmovement.Location = new System.Drawing.Point(1282, 290);
             this.txtmovement.Name = "txtmovement";
             this.txtmovement.Size = new System.Drawing.Size(100, 20);
             this.txtmovement.TabIndex = 0;
@@ -131,7 +131,7 @@
             // 
             this.labmovement.AutoSize = true;
             this.labmovement.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labmovement.Location = new System.Drawing.Point(1210, 224);
+            this.labmovement.Location = new System.Drawing.Point(1218, 293);
             this.labmovement.Name = "labmovement";
             this.labmovement.Size = new System.Drawing.Size(57, 13);
             this.labmovement.TabIndex = 7;
@@ -144,7 +144,7 @@
             // 
             // txtmonth
             // 
-            this.txtmonth.Location = new System.Drawing.Point(1274, 258);
+            this.txtmonth.Location = new System.Drawing.Point(1282, 327);
             this.txtmonth.Name = "txtmonth";
             this.txtmonth.Size = new System.Drawing.Size(100, 20);
             this.txtmonth.TabIndex = 8;
@@ -153,7 +153,7 @@
             // 
             this.labmonth.AutoSize = true;
             this.labmonth.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.labmonth.Location = new System.Drawing.Point(1211, 261);
+            this.labmonth.Location = new System.Drawing.Point(1219, 330);
             this.labmonth.Name = "labmonth";
             this.labmonth.Size = new System.Drawing.Size(37, 13);
             this.labmonth.TabIndex = 9;
@@ -161,13 +161,13 @@
             // 
             // dailygraph
             // 
-            chartArea6.Name = "ChartArea1";
-            this.dailygraph.ChartAreas.Add(chartArea6);
-            legend6.Name = "Legend1";
-            this.dailygraph.Legends.Add(legend6);
-            this.dailygraph.Location = new System.Drawing.Point(537, 509);
+            chartArea4.Name = "ChartArea1";
+            this.dailygraph.ChartAreas.Add(chartArea4);
+            legend4.Name = "Legend1";
+            this.dailygraph.Legends.Add(legend4);
+            this.dailygraph.Location = new System.Drawing.Point(10, 434);
             this.dailygraph.Name = "dailygraph";
-            this.dailygraph.Size = new System.Drawing.Size(664, 288);
+            this.dailygraph.Size = new System.Drawing.Size(1372, 363);
             this.dailygraph.TabIndex = 10;
             this.dailygraph.Text = "Diario";
             // 
