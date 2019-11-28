@@ -43,7 +43,7 @@ namespace MainMenu
             {
                 dts = connectBBDD.graphdata();
                 data = dts.Tables[0];
-                fillChar();
+                fillTools();
                 fillGrid(dts);
             }
             catch (Exception Ge)
@@ -74,21 +74,21 @@ namespace MainMenu
         #endregion Events
 
         #region Methods        
-        private string fillChar()
+        private void fillTools()
         {
-            y = null;
-            string _fillChar = "";           
+            y = null;               
             foreach (DataRow row in data.Rows)
             {             
                 total = Convert.ToDouble(row["total"]);
-                month = Convert.ToString(row["month"]);                
+                month = Convert.ToString(row["month"]);
+                labLast.Text = row["total"].ToString();
+                labLast.Text += "€"; 
                 if (listMonth.Contains(month))
                 {
                     y = grafMoney.Series.Add(month.ToString());
                     y.Points.Add(total);
                 }               
-            }
-            return _fillChar;
+            }            
         }        
         private void insertData()
         {
@@ -112,7 +112,7 @@ namespace MainMenu
                 rows["date"] = txtdate.Text;               
                 rows["description"] = txtdescrip.Text;
                 rows["bankingmovement"] = txtmovement.Text;
-                rows["month"] = txtmonth.Text;
+                rows["month"] = txtmonth.Text;                
                 if (regMonth == false)
                 {
                     data.Rows.Add(rows);

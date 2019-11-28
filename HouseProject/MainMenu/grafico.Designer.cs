@@ -29,10 +29,10 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea5 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend5 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             this.grafMoney = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.txtdate = new System.Windows.Forms.TextBox();
             this.txtdescrip = new System.Windows.Forms.TextBox();
@@ -47,6 +47,7 @@
             this.labmonth = new System.Windows.Forms.Label();
             this.dailygraph = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.pictureBack = new System.Windows.Forms.PictureBox();
+            this.labLast = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.grafMoney)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvGraph)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dailygraph)).BeginInit();
@@ -55,10 +56,10 @@
             // 
             // grafMoney
             // 
-            chartArea1.Name = "ChartArea1";
-            this.grafMoney.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.grafMoney.Legends.Add(legend1);
+            chartArea5.Name = "ChartArea1";
+            this.grafMoney.ChartAreas.Add(chartArea5);
+            legend5.Name = "Legend1";
+            this.grafMoney.Legends.Add(legend5);
             this.grafMoney.Location = new System.Drawing.Point(537, 149);
             this.grafMoney.Name = "grafMoney";
             this.grafMoney.Size = new System.Drawing.Size(664, 354);
@@ -160,10 +161,10 @@
             // 
             // dailygraph
             // 
-            chartArea2.Name = "ChartArea1";
-            this.dailygraph.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.dailygraph.Legends.Add(legend2);
+            chartArea6.Name = "ChartArea1";
+            this.dailygraph.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.dailygraph.Legends.Add(legend6);
             this.dailygraph.Location = new System.Drawing.Point(537, 509);
             this.dailygraph.Name = "dailygraph";
             this.dailygraph.Size = new System.Drawing.Size(664, 288);
@@ -180,12 +181,23 @@
             this.pictureBack.TabStop = false;
             this.pictureBack.Click += new System.EventHandler(this.pictureBack_Click);
             // 
+            // labLast
+            // 
+            this.labLast.AutoSize = true;
+            this.labLast.Font = new System.Drawing.Font("Times New Roman", 27.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labLast.ForeColor = System.Drawing.Color.Lime;
+            this.labLast.Location = new System.Drawing.Point(769, 59);
+            this.labLast.Name = "labLast";
+            this.labLast.Size = new System.Drawing.Size(0, 42);
+            this.labLast.TabIndex = 13;
+            // 
             // grafico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.ClientSize = new System.Drawing.Size(1394, 804);
+            this.Controls.Add(this.labLast);
             this.Controls.Add(this.pictureBack);
             this.Controls.Add(this.dailygraph);
             this.Controls.Add(this.labmonth);
@@ -227,5 +239,6 @@
         private System.Windows.Forms.Label labmonth;
         private System.Windows.Forms.DataVisualization.Charting.Chart dailygraph;
         private System.Windows.Forms.PictureBox pictureBack;
+        private System.Windows.Forms.Label labLast;
     }
 }
