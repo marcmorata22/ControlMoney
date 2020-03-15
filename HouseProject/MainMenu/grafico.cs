@@ -39,17 +39,17 @@ namespace MainMenu
         #region Events
         public void grafico_Load(object sender, EventArgs e)
         {
-            try
-            {
-                dts = connectBBDD.graphdata();
-                data = dts.Tables[0];
-                fillChar();
-                fillGrid(dts);
-            }
-            catch (Exception Ge)
-            {
-                MessageBox.Show(Ge.Message);
-            }
+            //try
+            //{
+            //    dts = connectBBDD.graphdata();
+            //    data = dts.Tables[0];
+            //    fillChar();
+            //    fillGrid(dts);
+            //}
+            //catch (Exception Ge)
+            //{
+            //    MessageBox.Show(Ge.Message);
+            //}
         }
         private void butUpdate_Click(object sender, EventArgs e)
         {
@@ -112,7 +112,7 @@ namespace MainMenu
                 if (regMonth == false)
                 {
                     data.Rows.Add(rows);
-                    connectBBDD.update(dts, query);
+                    //connectBBDD.update(dts, query);
                 }
             }
             catch(Exception Ge)

@@ -13,24 +13,25 @@ namespace ConectionClass
 {
     public class DBConnectionClass
     {
-        #region Global Vars           
-        private string query;       
+        #region Global Vars                   
+        ControlMoneyEntities db = new ControlMoneyEntities();
+        List<logins> _logins;
         #endregion Global Vars  
-
-
         #region Methods
-        
-
-        
-        //public DataSet ComprobarUser(string serial_num, string passw)
-        //{
-        //    Connect();
-        //    query = "Select serial_num, password from users where serial_num='" + serial_num + "'AND password='" + passw + "'";
-        //    SqlDataAdapter adapter = new SqlDataAdapter(query, _ConnectionString);            
-        //    adapter.Fill(dts);
-        //    _SQLConnexion.Close();
-        //    return dts;
-        //}
+        public List<logins> getUser()
+        {
+            try
+            {
+                _logins = (from l in db.logins
+                            select l).ToList();
+                return _logins;
+            }
+            catch (Exception Ge)
+            {
+                MessageBox.Show(Ge.Message);
+            }
+            return null;
+        }
         //public DataSet graphdata()
         //{
         //    Connect();

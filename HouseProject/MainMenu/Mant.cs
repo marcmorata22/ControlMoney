@@ -33,7 +33,7 @@ namespace MainMenu
         private void Mant_Load(object sender, EventArgs e)
         {
             txtbox = new sdstxtbox();
-            dts = connectBBDD.graphdata();
+            //dts = connectBBDD.graphdata();
             RellenarGrid(dts);
         }
         private void butUpdate_Click(object sender, EventArgs e)
@@ -42,12 +42,12 @@ namespace MainMenu
             {
                 if (!news)
                 {
-                    connectBBDD.update(dts, query);
+                //    connectBBDD.update(dts, query);
                 }
                 else
                 {
                     AñadirFila();
-                    connectBBDD.update(dts, query);
+                   // connectBBDD.update(dts, query);
                     BindDades();
                 }
             }

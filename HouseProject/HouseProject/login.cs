@@ -8,17 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-
-
 namespace HouseProject
 {
     public partial class login : Form
     {
-        #region Global Vars 
-        DataSet dts;
-        ConectionClass.DBConnectionClass connectBBDD = new ConectionClass.DBConnectionClass();
+        #region Global Vars         
+        ConectionClass.DBConnectionClass connectionClass = new ConectionClass.DBConnectionClass(); 
         Form menu = new MainMenu.Menu();
-        int i = 0;
+        int i = 0;        
         #endregion Global Vars
 
         #region constructor
@@ -45,19 +42,21 @@ namespace HouseProject
         #region Methods
         private void LoginAcces()
         {
+           var users = connectionClass.getUser();
+
             try
-            {          
-                
-                dts = connectBBDD.ComprobarUser(txtSerial.Text, txtPassw.Text);
-                if (dts.Tables[0].Rows.Count == 1)
+            {
+
+               // dts = connectBBDD.ComprobarUser(txtSerial.Text, txtPassw.Text);
+                if (true)
                 {
                     labFail.Visible = false;
                     menu.Show();
                 }
                 else
                 {
-                    labFail.Visible = true;                    
-                    if(i >= 10)
+                    labFail.Visible = true;
+                    if (i >= 10)
                     {
                         System.Diagnostics.Process.Start("Reset.vbs");
                     }
@@ -65,7 +64,7 @@ namespace HouseProject
                 }
             }
             catch (Exception Ge)
-            {               
+            {
                 MessageBox.Show(Ge.Message);
             }
         }
