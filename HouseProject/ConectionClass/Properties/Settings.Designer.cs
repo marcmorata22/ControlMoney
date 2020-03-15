@@ -43,5 +43,16 @@ namespace ConectionClass.Properties {
                 return ((string)(this["MONEYBBDDConnectionString"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=skynet\\sqlexpress;Initial Catalog=ControlMoney;Persist Security Info=" +
+            "True;User ID=admin")]
+        public string ControlMoneyConnectionString {
+            get {
+                return ((string)(this["ControlMoneyConnectionString"]));
+            }
+        }
     }
 }
