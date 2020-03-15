@@ -24,6 +24,8 @@ namespace ConectionClass
             {
                 _logins = (from l in db.logins
                             select l).ToList();
+
+
                 return _logins;
             }
             catch (Exception Ge)
