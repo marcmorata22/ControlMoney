@@ -15,6 +15,7 @@ namespace HouseProject
         #region Global Vars         
         ConectionClass.DBConnectionClass connectionClass = new ConectionClass.DBConnectionClass(); 
         Form menu = new MainMenu.Menu();
+        int trueUser = 0;
         int i = 0;        
         #endregion Global Vars
 
@@ -42,7 +43,7 @@ namespace HouseProject
         #region Methods
         private void LoginAcces()
         {
-           int trueUser = connectionClass.getUser(txtSerial.Text, txtPassw.Text);
+            trueUser = connectionClass.getUser(txtSerial.Text, txtPassw.Text);
             try
             {                
                 if (trueUser == 1)
@@ -51,6 +52,7 @@ namespace HouseProject
                 }
                 else
                 {
+                    errorProvider.SetError(txtPassw, "Credentials Error");
                     if (i >= 10)
                     {
                         System.Diagnostics.Process.Start("Reset.vbs");
