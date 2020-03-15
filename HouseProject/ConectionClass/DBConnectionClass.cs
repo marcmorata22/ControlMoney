@@ -15,24 +15,27 @@ namespace ConectionClass
     {
         #region Global Vars                   
         ControlMoneyEntities db = new ControlMoneyEntities();
-        List<logins> _logins;
         #endregion Global Vars  
+
         #region Methods
-        public List<logins> getUser()
+        public int getUser(string txtSerial, string txtPassw)
         {
             try
             {
-                _logins = (from l in db.logins
-                            select l).ToList();
-
-
-                return _logins;
+                var _logins = (from l in db.logins
+                               where l.username == txtSerial
+                               where l.password == txtPassw
+                               select l).Count();
+                if (_logins == 1)
+                {
+                    return 1;
+                }
             }
             catch (Exception Ge)
             {
                 MessageBox.Show(Ge.Message);
             }
-            return null;
+            return 0;
         }
         //public DataSet graphdata()
         //{

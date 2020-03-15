@@ -42,13 +42,10 @@ namespace HouseProject
         #region Methods
         private void LoginAcces()
         {
-           int users = connectionClass.getUser();
-
+           int trueUser = connectionClass.getUser(txtSerial.Text, txtPassw.Text);
             try
-            {
-
-               // dts = connectBBDD.ComprobarUser(txtSerial.Text, txtPassw.Text);
-                if (users.Tables[0].Rows.Count == 1)
+            {                
+                if (trueUser == 1)
                 {
                     labFail.Visible = false;
                     menu.Show();
