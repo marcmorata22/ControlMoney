@@ -47,12 +47,10 @@ namespace HouseProject
             {                
                 if (trueUser == 1)
                 {
-                    labFail.Visible = false;
                     menu.Show();
                 }
                 else
                 {
-                    labFail.Visible = true;
                     if (i >= 10)
                     {
                         System.Diagnostics.Process.Start("Reset.vbs");
